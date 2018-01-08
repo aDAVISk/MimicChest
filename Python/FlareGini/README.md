@@ -1,5 +1,5 @@
 # FlareGini
-This program will calculate Gini coefficient of the given flare report.<br>
+This program will calculate Gini coefficient of maximum GOES X-ray fluxes with the given flare report.<br>
 
 This program uses ReadGoesXrsReport from <br>
 https://github.com/aDAVISk/PythonForSpaceWeather/tree/master/ReadGoesXrsReport <br>
