@@ -1,6 +1,5 @@
 This code is to check the following tweet. <br>
 <br>
-<br>
 According to the @tweetsauce 's tweet <br>
 https://twitter.com/tweetsauce/status/965259567322943490 <br>
 > 1 = 1! <br>
@@ -9,4 +8,5 @@ https://twitter.com/tweetsauce/status/965259567322943490 <br>
 > 40585 = 4! + 0! + 5! + 8! + 5!
 > 
 > There are only those four numbers with this property.<br>
-
+<br>
+Nubmers up to 100000 are checked, and quoated argument is plausible. 
