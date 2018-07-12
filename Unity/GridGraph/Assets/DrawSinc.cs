@@ -10,7 +10,7 @@ public class DrawSinc : MonoBehaviour {
 	public float Ymax = 10.0f;
 	public float dY = 1.0f;
 
-	private Vector3[,] verteces;
+	private Vector3[,] vertices;
 	private int Xnum, Ynum;
 	private GameObject[] LineObjX,LineObjY;
 
@@ -18,13 +18,13 @@ public class DrawSinc : MonoBehaviour {
 	void Start () {
 		Xnum = Mathf.FloorToInt((Xmax - Xmin) / dX + 1);
 		Ynum = Mathf.FloorToInt((Ymax - Ymin) / dY + 1);
-		verteces = new Vector3[Xnum,Ynum];
+		vertices = new Vector3[Xnum,Ynum];
 		float x,y;
 		for(int i=0; i<Xnum;i++){
 			for(int j=0; j<Ynum;j++){
 				x = Xmin+dX*i;
 				y = Ymin+dY*j;
-				verteces[i,j] = new Vector3(x,myFunc(x,y),y);
+				vertices[i,j] = new Vector3(x,myFunc(x,y),y);
 			}
 		}
 		LineObjX = new GameObject[Ynum];
@@ -37,7 +37,7 @@ public class DrawSinc : MonoBehaviour {
 			newLine.SetWidth(0.25f,0.25f);
 			newLine.SetVertexCount(Xnum);
 			for(int i=0; i<Xnum; i++){
-				newLine.SetPosition(i,verteces[i,j]);
+				newLine.SetPosition(i,vertices[i,j]);
 			}
 		}
 		for(int i=0; i<Xnum; i++){
@@ -48,7 +48,7 @@ public class DrawSinc : MonoBehaviour {
 			newLine.SetWidth(0.25f,0.25f);
 			newLine.SetVertexCount(Xnum);
 			for(int j=0; j<Ynum; j++){
-				newLine.SetPosition(j,verteces[i,j]);
+				newLine.SetPosition(j,vertices[i,j]);
 			}
 		}
 	}
