@@ -45,7 +45,7 @@ qvr = ax.quiver(mesh_xx,mesh_yy,mesh_zz,vx,vy,vz)
 tt = 0.2
 
 new_pos = mySeed
-strl_x, strl_y, strl_z = strl.get_streamline(xx,yy,zz,Bx,By,Bz, seed=new_pos)
+strl_x, strl_y, strl_z = strl.getStreamline(xx,yy,zz,Bx,By,Bz, seed=new_pos)
 #print("strl = {0}, {1}".format(strl_x,strl_y))
 ax.plot(strl_x,strl_y,strl_z, "r--")
 for ii in range(50):
@@ -76,7 +76,7 @@ for ii in range(50):
 
 	# update position and plot
 	new_pos = old_pos + tt * np.array([curr_vx,curr_vy,curr_vz])
-	strl_x, strl_y, strl_z = strl.get_streamline(xx,yy,zz,Bx,By,Bz, seed=new_pos)
+	strl_x, strl_y, strl_z = strl.getStreamline(xx,yy,zz,Bx,By,Bz, seed=new_pos)
 	ax.plot(strl_x,strl_y,strl_z, "g--")
 	ax.plot([new_pos[0],old_pos[0]],[new_pos[1],old_pos[1]],[new_pos[2],old_pos[2]],"ro")
 	#ax.streamplot(xx,yy,vx,vy)
