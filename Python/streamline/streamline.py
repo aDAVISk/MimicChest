@@ -9,19 +9,19 @@
 ##########################################################
 import numpy as np
 
-def get_streamline(*arg, seed=np.zeros(3), drct="Both", dd_rec=0.5, ignore=True):
+def getStreamline(*arg, seed=np.zeros(3), drct="Both", dd_rec=0.5, ignore=True):
 	num = len(arg)
 	if num == 4:
-		return get_streamline2d(arg[0],arg[1],arg[2],arg[3],seed=seed[0:2],drct=drct, dd_rec=0.5, ignore=ignore)
+		return getStreamline2d(arg[0],arg[1],arg[2],arg[3],seed=seed[0:2],drct=drct, dd_rec=0.5, ignore=ignore)
 	elif num == 6:
-		return get_streamline3d(arg[0],arg[1],arg[2],arg[3],arg[4],arg[5],seed=seed,drct=drct, dd_rec=0.5, ignore=ignore)
+		return getStreamline3d(arg[0],arg[1],arg[2],arg[3],arg[4],arg[5],seed=seed,drct=drct, dd_rec=0.5, ignore=ignore)
 	else:
 		raise TypeError("Method 'get_streamline' takes 4 or 6 arguments.")
 	for ii in range(num):
 		print(arg[ii])
-#end of get_streamline
+#end of getStreamline
 
-def get_streamline3d(x,y,z,vx,vy,vz,seed=np.zeros(3), drct="Both", dd_rec=0.5, ignore=True):
+def getStreamline3d(x,y,z,vx,vy,vz,seed=np.zeros(3), drct="Both", dd_rec=0.5, ignore=True):
 	nums = (len(x),len(y),len(z))
 	if nums != np.shape(vx) != np.shape(vy) != np.shape(vz):
 		raise TypeError("Sizes of arguments do not agree.")
@@ -143,9 +143,9 @@ def get_streamline3d(x,y,z,vx,vy,vz,seed=np.zeros(3), drct="Both", dd_rec=0.5, i
 	if not ignore:
 		raise ValueError("Something wrong happened at get_streamline3d().")
 	return np.array([0.0]), np.array([0.0]), np.array([0.0])
-#end of get_streamline3d
+#end of getStreamline3d
 
-def get_streamline2d(x,y,vx,vy,seed=np.zeros(2), drct="Both", dd_rec=0.1, ignore=True):
+def getStreamline2d(x,y,vx,vy,seed=np.zeros(2), drct="Both", dd_rec=0.1, ignore=True):
 	nums = (len(x),len(y))
 	if nums != np.shape(vx) != np.shape(vy):
 		raise TypeError("Sizes of arguments do not agree.")
@@ -266,4 +266,4 @@ def get_streamline2d(x,y,vx,vy,seed=np.zeros(2), drct="Both", dd_rec=0.1, ignore
 	if not ignore:
 		raise ValueError("Something wrong happened at get_streamline3d().")
 	return np.array([0.0]), np.array([0.0])
-#end of get_streamline3d
+#end of getStreamline2d
