@@ -11,6 +11,7 @@
 import numpy as np 
 
 def setArcsinh(method, *args, dim=1, **kwargs):
+	# dim :a scaler greator than 0 or iterable containing intecies of arg to be replaced.
 	if not hasattr(dim,"__itr__"):
 		dim = range(dim)
 	args = list(args)
