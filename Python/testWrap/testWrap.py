@@ -7,16 +7,16 @@
 
 import numpy as np
 
-def testCast(method, *args, **kwargs):
+def testWrap(method, *args, **kwargs):
 	return method(*args, **kwargs)
 
 def multiply(x, y):
 	return x * y
 
-testCast(print,"Hello")
+testWrap(print,"Hello")
 
-print(testCast(multiply,3,4))
+print(testWrap(multiply,3,4))
 
-a = testCast(np.zeros, (2,2), dtype=int)
+a = testWrap(np.zeros, (2,2), dtype=int)
 
 print(a)
