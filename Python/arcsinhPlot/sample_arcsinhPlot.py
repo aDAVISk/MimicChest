@@ -1,3 +1,13 @@
+##########################################################
+# sample_arcsinhPlot.py
+# Author: Akito D. Kawamura
+# sample program for arcsinhPlot.py.  
+#
+# This program is published under BSD 3-Clause License.
+# This program is a beta version.
+# Please use this program under your responsibility.
+##########################################################
+
 from arcsinhPlot import setArcsinh
 
 import numpy as np
