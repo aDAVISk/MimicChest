@@ -1,7 +1,7 @@
 ##########################################################
 # arcsinhPlot.py
 # Author: Akito D. Kawamura
-# calculate positions of 2D/3D stream line to be plotted.  
+# Convert a method capable to plot in arcsinh-scale.  
 #
 # This program is published under BSD 3-Clause License.
 # This program is a beta version.
