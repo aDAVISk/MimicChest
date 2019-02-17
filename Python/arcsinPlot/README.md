@@ -2,7 +2,7 @@ This program allows users easily convert their plot axis in arcsinh scale.
 Arcsinh scalse has linear-scalse characteristics around the origin and log-scalse characteristics at larger absolute values, which are varid for all range of real number.
 Arcsinh scalse is good for multi-scale analysis. 
 
-call signiture
+**call signiture**
 ```
 setArcsinh(method, *args, dim=1, **kwargs)
 ```
