@@ -1,5 +1,5 @@
 ###############################################
-# FactoSum.py
+# testWrap.py
 # Author: Akito D. Kawamura (aDAVISk)
 # Published under BSD 3-clause license
 # Last Update: 2019/02/17
