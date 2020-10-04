@@ -9,7 +9,7 @@ Making a bowl of salad with ingredients related to the hisotry of space explorat
 --- Preparation
 Main Ingredients:
 Red Konnyaku : chopped into few cm long, microwaved, marinaded with soy sauce
-Daikon Radish : chopped into few cm long, soak in salt water for minutes, drained well
+Daikon Radish : chopped into few cm long, soak in salt water for minutes, drained well
 Mashed Potato : following the product’s instruction, place in a squeeze bag
 Red Romain Lettuce, Mizuna Mustard : wash and cut into mouthful size
 
