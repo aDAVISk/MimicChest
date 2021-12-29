@@ -73,9 +73,9 @@ def getStreamline3d(x,y,z,vx,vy,vz,seed=np.zeros(3), drct="Both", dd_rec=0.5, ig
 			weight = np.array([wg_y_l*weight,(1.-wg_y_l)*weight])
 			weight = np.array([wg_z_l*weight,(1.-wg_z_l)*weight])
 
-			curr_vx = np.sum(vx[id_z_l:id_z_h+1,id_y_l:id_y_h+1,id_x_l:id_x_h+1]*weight)
-			curr_vy = np.sum(vy[id_z_l:id_z_h+1,id_y_l:id_y_h+1,id_x_l:id_x_h+1]*weight)
-			curr_vz = np.sum(vz[id_z_l:id_z_h+1,id_y_l:id_y_h+1,id_x_l:id_x_h+1]*weight)
+			curr_vx = np.sum(vx[id_x_l:id_x_h+1,id_y_l:id_y_h+1,id_z_l:id_z_h+1]*weight)
+			curr_vy = np.sum(vy[id_x_l:id_x_h+1,id_y_l:id_y_h+1,id_z_l:id_z_h+1]*weight)
+			curr_vz = np.sum(vz[id_x_l:id_x_h+1,id_y_l:id_y_h+1,id_z_l:id_z_h+1]*weight)
 
 			ff = max([abs(curr_vx), abs(curr_vy), abs(curr_vz)])/dd_rec
 			if ff < flim:	# slower than limit
@@ -118,9 +118,9 @@ def getStreamline3d(x,y,z,vx,vy,vz,seed=np.zeros(3), drct="Both", dd_rec=0.5, ig
 			weight = np.array([wg_y_l*weight,(1.-wg_y_l)*weight])
 			weight = np.array([wg_z_l*weight,(1.-wg_z_l)*weight])
 
-			curr_vx = np.sum(vx[id_z_l:id_z_h+1,id_y_l:id_y_h+1,id_x_l:id_x_h+1]*weight)
-			curr_vy = np.sum(vy[id_z_l:id_z_h+1,id_y_l:id_y_h+1,id_x_l:id_x_h+1]*weight)
-			curr_vz = np.sum(vz[id_z_l:id_z_h+1,id_y_l:id_y_h+1,id_x_l:id_x_h+1]*weight)
+			curr_vx = np.sum(vx[id_x_l:id_x_h+1,id_y_l:id_y_h+1,id_z_l:id_z_h+1]*weight)
+			curr_vy = np.sum(vy[id_x_l:id_x_h+1,id_y_l:id_y_h+1,id_z_l:id_z_h+1]*weight)
+			curr_vz = np.sum(vz[id_x_l:id_x_h+1,id_y_l:id_y_h+1,id_z_l:id_z_h+1]*weight)
 
 			ff = max([abs(curr_vx), abs(curr_vy), abs(curr_vz)])/dd_rec
 			#if ff < flim:	# slower than limit
@@ -196,8 +196,8 @@ def getStreamline2d(x,y,vx,vy,seed=np.zeros(2), drct="Both", dd_rec=0.1, ignore=
 
 			weight = np.array([wg_x_l,1.-wg_x_l])
 			weight = np.array([wg_y_l*weight,(1.-wg_y_l)*weight])
-			curr_vx = np.sum(vx[id_y_l:id_y_h+1,id_x_l:id_x_h+1]*weight)*vv_norm
-			curr_vy = np.sum(vy[id_y_l:id_y_h+1,id_x_l:id_x_h+1]*weight)*vv_norm
+			curr_vx = np.sum(vx[id_x_l:id_x_h+1,id_y_l:id_y_h+1]*weight)*vv_norm
+			curr_vy = np.sum(vy[id_x_l:id_x_h+1,id_y_l:id_y_h+1]*weight)*vv_norm
 
 			ff = max([abs(curr_vx), abs(curr_vy)])/dd_rec
 			if ff < flim:	# slower than limit
@@ -243,8 +243,8 @@ def getStreamline2d(x,y,vx,vy,seed=np.zeros(2), drct="Both", dd_rec=0.1, ignore=
 			weight = np.array([wg_x_l,1.-wg_x_l])
 			weight = np.array([wg_y_l*weight,(1.-wg_y_l)*weight])
 
-			curr_vx = np.sum(vx[id_y_l:id_y_h+1,id_x_l:id_x_h+1]*weight)*vv_norm
-			curr_vy = np.sum(vy[id_y_l:id_y_h+1,id_x_l:id_x_h+1]*weight)*vv_norm
+			curr_vx = np.sum(vx[id_x_l:id_x_h+1,id_y_l:id_y_h+1]*weight)*vv_norm
+			curr_vy = np.sum(vy[id_x_l:id_x_h+1,id_y_l:id_y_h+1]*weight)*vv_norm
 
 			ff = max([abs(curr_vx), abs(curr_vy)])/dd_rec
 			if ff < flim:	# slower than limit
