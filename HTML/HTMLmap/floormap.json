@@ -1,0 +1,14 @@
+{
+  "title":"Sample Floor",
+  "canvas": [500,400],
+  "exterior": {"type":"Rectangle","position":[50,50],"shape":[400,300]},
+  "rooms":[
+    {"id":"Room1","name":"１号室", "type":"Rectangle","position":[100,50],"shape":[150,100]},
+    {"id":"Room2","name":"２号室", "type":"Rectangle","position":[250,200],"shape":[100,150]}
+  ],
+  "styles":{
+    "exterior":{"stroke":"black","stroke-width":8, "fill":"none"},
+    "room":{"stroke":"black","stroke-width":4, "fill":"lightblue"},
+    "text":{"stroke":"black","text-anchor":"middle", "stroke-width":0.5}
+  }
+}
