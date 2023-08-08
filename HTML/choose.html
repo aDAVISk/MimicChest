@@ -2,8 +2,8 @@
   <head>
   </head>
   <body>
-    <a href="#" onclick="test1('room1');">room1をハイライト</a></br>
-    <a href="#" onclick="test1('room2');">room2をハイライト</a></br>
+    <a href="#" onclick="selectRoom('room1');">room1をハイライト</a></br>
+    <a href="#" onclick="selectRoom('room2');">room2をハイライト</a></br>
     </br>
     <svg width="500" height="400">
       <rect id="room1" class="room" x="100" y="50" width="150" height="100" stroke="black" stroke-width="4" fill="lightblue"/>
@@ -13,16 +13,20 @@
       <rect x="50" y="50" width="400" height="300" stroke="black" stroke-width="8" fill="none"/>
     </svg>
     <script>
-      function test1(room_id){
+      function selectRoom(room_id){
         //alert(room_id)
+        selectNone()
+        target = document.getElementById(room_id);
+        target.style.fill = "pink";//change background color to selected
+        //alert(target.id)
+      }
+      function selectNone(){
         allrooms = document.getElementsByClassName("room");
         for(rr of allrooms){
           rr.style.fill = "lightblue";// change background color to default
           //alert(rr.id)
         }
-        target = document.getElementById(room_id);
-        target.style.fill = "pink";//change background color to selected
-        //alert(target.id)
+
       }
     </script>
   </body>
